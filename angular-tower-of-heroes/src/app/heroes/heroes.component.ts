@@ -10,14 +10,14 @@ import { MessagesService } from '../messages.service';
 })
 export class HeroesComponent implements OnInit {
 
-  selectedHero? : Hero;
+  // selectedHero? : Hero;
 
   heroes : Hero[] = [];
 
-  onSelect(h: Hero) {
-    this.selectedHero = h;
-    this.srvMsg.add(`HerosComp says: you selected ${h.name}`);
-  }
+  // onSelect(h: Hero) {
+  //   this.selectedHero = h;
+  //   this.srvMsg.add(`HerosComp says: you selected ${h.name}`);
+  // }
 
   constructor(private srvHero: HeroService, private srvMsg: MessagesService) { }
 
