@@ -1,3 +1,10 @@
+<h2>My heroes</h2>
+
+<div>
+  <label for="new-hero">HEro name:</label>
+  <input id="new-hero" type="text" #hero_name>
+  <button class="add-button" (click)="add(hero_name.value); hero_name.value='' "> ADD </button>
+</div>
 
 <ul class="heroes">
   <li *ngFor="let h of heroes">
@@ -6,8 +13,10 @@
         <span class="badge"> {{h.id}} </span>
         <span class="name"> {{h.name}} </span>
       </a>
+      <button class="delete" title="kill this hero" (click)="delete(h)">x</button>
     <!-- </button> -->
   </li>
 </ul>
 
 <!-- <app-hero-details [hero]="selectedHero"></app-hero-details> -->
+
